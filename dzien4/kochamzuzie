@@ -1,0 +1,7 @@
+kocham = []
+i = 0
+for i in range(1000):
+    kocham.append("kocham zuzie")
+    i += 1
+
+print(kocham)

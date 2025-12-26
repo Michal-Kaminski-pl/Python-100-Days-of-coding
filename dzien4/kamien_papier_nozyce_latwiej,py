@@ -1,0 +1,40 @@
+import random
+
+gra = ["""
+    _______
+---'   ____)
+      (_____)
+      (_____)
+      (____)
+---.__(___)
+""",
+"""
+     _______
+---'    ____)____
+           ______)
+          _______)
+         _______)
+---.__________)
+""",
+"""
+    _______
+---'   ____)____
+          ______)
+       __________)
+      (____)
+---.__(___)
+"""]
+
+wybor_kakuter = random.randint(0, 2)
+
+wybor = int(input("Wpisz 0, 1 lub 2 dla kamienia, papieru lub nozyc\n"))
+print(f"{gra[wybor]}")
+if wybor == wybor_kakuter:
+    print(f"\n {gra[wybor_kakuter]}")
+    print("gracie dalej")
+if (wybor == 0 and wybor_kakuter == 1) or (wybor == 1 and wybor_kakuter == 2) or (wybor == 2 and wybor_kakuter == 0):
+    print(f" \n {gra[wybor_kakuter]}")
+    print("przegrales!")
+if (wybor == 0 and wybor_kakuter == 2) or (wybor == 1 and wybor_kakuter == 0) or (wybor == 2 and wybor_kakuter == 1):
+    print(f"\n {gra[wybor_kakuter]}")
+    print("wygrales")

@@ -1,0 +1,45 @@
+import random
+
+def main():
+    
+    def zycie(liczba_zyc):
+        liczba_zyc -= 1
+        if liczba_zyc == 0:
+            wybor=input("Przegrales!, chcesz kontynuowac czy zakonczyc gre 'y' czy 'n'")
+            if wybor == 'y':
+                main()
+            elif wybor == 'n':
+                exit()
+            else:
+                print("blad")
+        return liczba_zyc
+    
+    def player_choice():
+        poziom_trudnosci = input("Wybierasz poziom 'hard' czy 'easy'?: \n").lower()
+        if poziom_trudnosci == 'hard':
+            liczba_zyc = 5
+        elif poziom_trudnosci == 'easy':
+            liczba_zyc = 10
+        else:
+            liczba_zyc = 10
+        liczba = random.randint(1, 100)
+        while True:
+            wybor = int(input("zgadnij liczbe z zakresu 1-100\n"))
+            if wybor > 100 or wybor < 0:
+                print("liczba jest spoza przedzialu\n")
+                liczba_zyc = zycie(liczba_zyc)
+            elif wybor < liczba:
+                print("Za malo!\n")
+                liczba_zyc = zycie(liczba_zyc)
+            elif wybor > liczba:
+                print("za duzo\n")
+                liczba_zyc = zycie(liczba_zyc)
+            elif wybor == liczba:
+                kontynuacja = input("Brawo wygrales!, czy chcesz kontynuowac?\n")
+                if kontynuacja == 'y':
+                    main()
+                elif kontynuacja == 'n':
+                    exit()
+    player_choice()
+        
+main()

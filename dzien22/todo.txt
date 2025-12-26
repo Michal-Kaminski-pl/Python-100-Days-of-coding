@@ -1,0 +1,15 @@
+1. klasa- 'odbijaki'
+2. klasa, obiekt pilka
+3. klasa, obiekt tabela wynikow
+4. mapa
+
+
+##
+1. ekran
+2. paletka
+3. druga paletka
+4. pilka 
+5. pilka pierdolnie w sciane
+6. pilka pierdolnie w odbijaki
+7. kiedy odbijak nie trafil
+8. wynik 

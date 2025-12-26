@@ -1,0 +1,28 @@
+height = int(input("Podaj wzorst: \n"))
+bilet_cena = 0
+if height >= 120:
+    try:
+        age = int(input("prosze podac wiek: \n"))
+    except TypeError:
+        "prosze podac poprawny typ danych"
+    if age >=18:
+        bilet_cena += 12
+    elif age >=12 and age < 18:
+        bilet_cena += 7
+    elif age >= 0 and age <= 12:
+        bilet_cena += 5
+    else:
+        print("blad prosze podac poprawny wiek ")
+
+    try:
+        zdjecie = input("Prosze napisac czy chcesz zdjecie czy nie ")
+        if zdjecie == "tak":
+            bilet_cena += 3
+        else:
+            exit
+    except:
+        TypeError("blad typu danych")
+else:
+    exit
+
+print(f"twoj bilet kosztuje {bilet_cena}")
